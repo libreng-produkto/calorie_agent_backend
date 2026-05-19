@@ -6,12 +6,13 @@ def test_health():
     resp = requests.get(f"{BASE_URL}/health")
     print(f"Health: {resp.json()}")
 
-def test_chat(message: str, images: list = None):
-    payload = {"message": message}
-    if images:
-        payload["images"] = images
+def test_chat(message: str, image_path: str = None):
+    data = {"message": message}
+    files = None
+    if image_path:
+        files = {"file": open(image_path, "rb")}
     
-    resp = requests.post(f"{BASE_URL}/chat", json=payload)
+    resp = requests.post(f"{BASE_URL}/chat", data=data, files=files)
     print(f"Response: {resp.json()}")
 
 def test_chat_with_image(message: str, image_path: str):
@@ -28,7 +29,4 @@ if __name__ == "__main__":
     test_chat("I had chicken and rice for lunch")
     
     print("\n=== Image Test ===")
-    test_chat_with_image(
-        "I ate this for breakfast", 
-        image_path=["/home/hz/CalorieAssistant/image.png"]
-    )
+    test_chat("I ate this for breakfast", "/home/hz/CalorieAssistant/image.png")

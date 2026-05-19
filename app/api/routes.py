@@ -1,11 +1,11 @@
-from fastapi import APIRouter, HTTPException,UploadFile,File
+from fastapi import APIRouter, HTTPException,UploadFile,File,Form
 from pydantic import BaseModel
 from app.services.agent import agent_service
 
 router = APIRouter()
 
 @router.post("/chat")
-async def chat(message:str, file: UploadFile = File(None)):
+async def chat(message: str = Form(...), file: UploadFile = File(None)):
     image_data = None
     if file:
         image_data = await file.read()
