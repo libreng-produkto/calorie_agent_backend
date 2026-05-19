@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calorie-assistant"
+version = "0.1.0"
+description = "Calorie tracking assistant"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain",
+    "langgraph",
+    "langchain-openrouter",
+    "langchain-ollama",
+    "python-dotenv",
+]
+
+[tool.setuptools]
+packages = ["back_end"]

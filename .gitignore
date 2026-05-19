@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+ENV/
+# IDE
+.vscode/
+.idea/
+# Env secrets
+.env
+.env.local
+# Docker (optional - you want these in repo)
+# Dockerfile
+# .dockerignore
+# OS
+.DS_Store
+Thumbs.db
+# Logs
+*.log
