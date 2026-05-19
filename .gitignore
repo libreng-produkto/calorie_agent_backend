@@ -19,3 +19,8 @@ ENV/
 Thumbs.db
 # Logs
 *.log
+
+#ignore png test
+*.png
+
+test_api.py

@@ -18,10 +18,10 @@ class AgentService:
         if image_data:
             b64 = f"data:image/png;base64,{base64.b64encode(image_data).decode()}"
             content.append({"type":"image_url","image_url":{"url":b64}})
-            
+
         state = {"messages": [HumanMessage(content=content)]}
         
         result = await self.graph.graph.ainvoke(state)
-        return result.get('structured_response')
+        return result.get('structured_response',{}).get('items')
 
 agent_service = AgentService()

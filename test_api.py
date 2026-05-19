@@ -29,4 +29,4 @@ if __name__ == "__main__":
     test_chat("I had chicken and rice for lunch")
     
     print("\n=== Image Test ===")
-    test_chat("I ate this for breakfast", "/home/hz/CalorieAssistant/image.png")
+    test_chat("I ate this for breakfast", "/home/hz/CalorieAssistant/chowking.png")
