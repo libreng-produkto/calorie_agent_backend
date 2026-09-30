@@ -1,6 +1,6 @@
 ## Purpose of this Project:
 This repo serves as the backend of the calorie agent app built on Python. This is a simple back-end built with LangChain's framework for ReAct Agents.
-Project completely launched and can be seen here: https://calicoapp.netlify.app/  **BEST TO BE OPENED ON A MOBILE DEVICE.
+Project completely launched and can be seen here: https://calicoapp.netlify.app/  **BEST TO BE OPENED ON A MOBILE DEVICE**
 - [ ] Big Caveat: Broken loading screen - so loading time may look blank but actually works.
 <img width="774" height="743" alt="image" src="https://github.com/user-attachments/assets/64046e64-4100-41c2-8fe0-a7c32fd1f8c3" />
 
